@@ -27,7 +27,7 @@ const Filters = (props) => {
           </div>
         </div>
         <div class="price xs-gutter para-sm-xs bold">
-          Price
+          <p>1000</p>
           <input
             type="range"
             name="priceRange"
@@ -42,6 +42,7 @@ const Filters = (props) => {
             }}
             max="10000"
           />
+          <p>10000</p>
         </div>
         <div class="Rating xs-gutter">
           <div class="para-sm-xs bold">Sort by Price</div>
