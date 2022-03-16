@@ -1,0 +1,16 @@
+@import "../../../shared.css";
+.summary section {
+  color: var(--bg-dull);
+  text-align: center;
+  position: relative;
+  max-width: 35rem;
+  background-color: var(--primary-color);
+  box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
+}
+.summary {
+  display: flex;
+  justify-content: center;
+}
+.summary section h3 {
+  color: var(--bg-dull);
+}

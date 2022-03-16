@@ -1,0 +1,63 @@
+@import url("https://pixelcss.netlify.app/import.css");
+@import url("https://pixelcss.netlify.app/pages/Navigation/navigation.css");
+
+:root {
+  --dark: #0f172a;
+  --bg-dull: #d4d4d8;
+  --primary-color: #292524;
+}
+
+/* Backgrounds */
+.bg-primary {
+  background-color: var(--primary-color);
+}
+.bg-dull {
+  background-color: var(--bg-dull);
+}
+
+.center {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/* Header */
+.brand-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand {
+  color: var(--txt-color);
+  background-color: var(--primary-color);
+}
+.navbar_header > a > i {
+  color: var(--txt-color);
+}
+
+/* Buttons */
+.primary-btn:hover {
+  border: 2px solid var(--txt-color);
+  background-color: inherit;
+  color: var(--txt-color);
+}
+.seconday-btn:hover {
+  color: var(--txt-color);
+}
+
+.left-nav-item > a,
+.left-nav-item > a > i {
+  color: var(--txt-color);
+}
+
+.card__actions > a:hover {
+  color: var(--txt-color);
+}
+.dull-color {
+  color: var(--bg-dull);
+}
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}

@@ -1,0 +1,50 @@
+@import "../../shared.css";
+/* @import "https://pixelcss.netlify.app/components/Card/Card.css"; */
+.card-container {
+  width: 15rem;
+}
+.img-full {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+}
+.card__actions {
+  width: 100%;
+}
+.card__actions a {
+  width: 100%;
+  text-align: center;
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__info {
+  text-align: center;
+}
+/* WishList */
+.wish-list-position {
+  position: relative;
+}
+.wish-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--txt-color);
+  color: var(--danger-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card__author {
+  display: flex;
+
+  justify-content: center;
+}
+
+.rating {
+  font-style: italic;
+}

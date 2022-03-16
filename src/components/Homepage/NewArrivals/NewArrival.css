@@ -1,0 +1,32 @@
+@import "../../../shared.css";
+
+.lower-section {
+  width: 100%;
+}
+.img-full {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+}
+
+.lower-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--bg-dull);
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+/* Featured products */
+.featured {
+  flex-grow: 1;
+  display: flex;
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 8px rgb(0, 0, 0, 0.35);
+}
+.feat-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}

@@ -1,0 +1,4 @@
+@import "../../../shared.css";
+.deals-bg {
+  background-color: var(--primary-color);
+}
