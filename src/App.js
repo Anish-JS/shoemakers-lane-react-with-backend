@@ -25,9 +25,6 @@ function App() {
     fetch("/api/products")
       .then((res) => res.json())
       .then((json) => setInitialData(json.products));
-
-    // console.log(typeOfProduct);
-    // console.log(category);
   }, []);
 
   const { filterState } = useFilters();
