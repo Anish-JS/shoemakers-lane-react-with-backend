@@ -8,7 +8,9 @@ import {
   faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../store/auth-context";
 const Header = (props) => {
+  const { isLoggedIn } = useAuth();
   return (
     <>
       <div className="brand">
@@ -32,13 +34,6 @@ const Header = (props) => {
             <Link to="/product-listing" className="primary-btn sm-brr para-sm">
               Catalogue
             </Link>
-            {/* <button
-              href="./pages/Product page/product_listing.html"
-              className="primary-btn sm-brr para-sm"
-              onClick={props.onShowCatalogue}
-            >
-              Catalogue
-            </button> */}
           </div>
           <div className="left-nav-item xs-gutter full-brr">
             <Link to="/new-arrival" className="primary-btn sm-brr para-sm">
@@ -66,9 +61,16 @@ const Header = (props) => {
             </a>
           </div>
           <div className="left-nav-item xs-gutter full-brr">
-            <Link to="/login" className="primary-btn sm-brr para-sm">
-              Login
-            </Link>
+            {!isLoggedIn && (
+              <Link to="/login" className="primary-btn sm-brr para-sm">
+                Login
+              </Link>
+            )}
+            {isLoggedIn && (
+              <Link to="/profile" className="primary-btn sm-brr para-sm">
+                Profile
+              </Link>
+            )}
           </div>
         </div>
       </div>

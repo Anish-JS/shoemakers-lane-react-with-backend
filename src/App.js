@@ -18,6 +18,8 @@ import { ratingFilter } from "./utils/productFilters/rating";
 import { priceRangeFilter } from "./utils/productFilters/priceRangeFilter";
 import { fastDeliveryFilter } from "./utils/productFilters/fastDeliveryFilter";
 import { outOfStockFilter } from "./utils/productFilters/outOfStockFilter";
+import Profile from "./components/Profile/Profile";
+import Mockman from "mockman-js";
 
 function App() {
   const [initialData, setInitialData] = useState([]);
@@ -58,6 +60,19 @@ function App() {
           path="/product-listing"
           element={<ProductListing products={filteredInitialData} />}
         />
+        <Route path="/profile" element={<Profile />}></Route>
+        <Route
+          path="/mock"
+          element={
+            <Mockman
+              endpointsList={[
+                "/api/test-todos",
+                "/api/auth/signup",
+                "/api/auth/login",
+              ]}
+            />
+          }
+        ></Route>
       </Routes>
       {/* <ProductListing products={productData.productList}></ProductListing> */}
       {/* <Login></Login> */}

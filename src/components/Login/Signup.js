@@ -1,6 +1,12 @@
 import "./Login.css";
 import { Link } from "react-router-dom";
+import formReducer from "../../store/formReducer";
+import { useAuth } from "../../store/auth-context";
+import { useReducer } from "react";
+const initialState = { firstName: "", lastName: "", email: "", password: "" };
 const Signup = () => {
+  const { signupHandler, error } = useAuth();
+  const [formState, dispatchFormState] = useReducer(formReducer, initialState);
   return (
     <>
       <div className="center-div">
@@ -15,6 +21,12 @@ const Signup = () => {
             </label>
             <input
               type="text"
+              onChange={(e) =>
+                dispatchFormState({
+                  type: "FIRST_NAME",
+                  payload: e.target.value,
+                })
+              }
               className="textbox img-xxxl xxs-padding bottom-gutter"
             />
             <label for="textbox" className="xxs-padding">
@@ -22,6 +34,12 @@ const Signup = () => {
             </label>
             <input
               type="text"
+              onChange={(e) =>
+                dispatchFormState({
+                  type: "LAST_NAME",
+                  payload: e.target.value,
+                })
+              }
               className="textbox img-xxxl xxs-padding bottom-gutter"
             />
             <label htmlFor="textbox" className="xxs-padding">
@@ -30,7 +48,15 @@ const Signup = () => {
             <input
               type="text"
               placeholder="example@gmail.com"
-              className="textbox img-xxxl xxs-padding bottom-gutter"
+              onChange={(e) =>
+                dispatchFormState({
+                  type: "EMAIL",
+                  payload: e.target.value,
+                })
+              }
+              className={`textbox img-xxxl xxs-padding bottom-gutter ${
+                error ? `error` : ``
+              }`}
             />
 
             <label for="textbox" className="xxs-padding">
@@ -39,6 +65,12 @@ const Signup = () => {
             <input
               type="password"
               placeholder=""
+              onChange={(e) =>
+                dispatchFormState({
+                  type: "PASSWORD",
+                  payload: e.target.value,
+                })
+              }
               className="textbox img-xxxl xxs-padding"
             />
           </div>
@@ -55,8 +87,14 @@ const Signup = () => {
               </label>
             </div>
           </div>
+          {error && (
+            <div className="para-sm-xs red xs-gutter">
+              Invalid email or password, please check
+            </div>
+          )}
           <Link
             to="/signup"
+            onClick={() => signupHandler(formState)}
             className="secondary-btn login-btn para-sm bold xs-gutter"
           >
             Create New Account
