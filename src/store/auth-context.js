@@ -55,7 +55,7 @@ const AuthProvider = ({ children }) => {
       details.password !== ""
     ) {
       try {
-        const response = await axios.post(`/api/auth/signup`, {
+        const response = await axios.post("api/auth/signup", {
           firstName: details.firstName,
           lastName: details.lastName,
           email: details.email,
