@@ -4,7 +4,7 @@ import "./Deals.css";
 const Deals = (props) => {
   // console.log(props.productData);
   const productList = props.productData.map((item) => (
-    <Card data={item} key={item.key}></Card>
+    <Card data={item} key={item["_id"]}></Card>
   ));
   // console.log(productList);
   return (

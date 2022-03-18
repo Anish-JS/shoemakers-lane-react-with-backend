@@ -51,3 +51,9 @@
   background-color: var(--txt-color);
   color: var(--dark-accent);
 }
+.error {
+  border-color: var(--danger-color);
+}
+.red {
+  color: var(--danger-color);
+}

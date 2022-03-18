@@ -2,20 +2,13 @@ import React from "react";
 import "./Login.css";
 import bcyrpt from "bcryptjs";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../store/auth-context";
+import { useState } from "react";
+
 const Login = () => {
-  const loginHandler = () => {
-    const sentData = {
-      email: "johndoe@gmail.com",
-      password: bcyrpt.hashSync("johnDoe123", 5),
-    };
-    fetch("/api/auth/login", {
-      method: "POST",
-      body: JSON.stringify(sentData),
-    })
-      .then((res) => res.json())
-      .then((json) => console.log(json.user));
-    // console.log(loginData);
-  };
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { loginHandler, error } = useAuth();
   return (
     <>
       <div className="center-div bg-dull">
@@ -29,9 +22,12 @@ const Login = () => {
               Email address
             </label>
             <input
-              type="text"
+              type="email"
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="example@gmail.com"
-              className="textbox img-xxxl xxs-padding bottom-gutter"
+              className={`textbox img-xxxl xxs-padding bottom-gutter ${
+                error ? `error` : ``
+              }`}
             />
 
             <label for="textbox" className="xxs-padding">
@@ -40,7 +36,10 @@ const Login = () => {
             <input
               type="password"
               placeholder=""
-              className="textbox img-xxxl xxs-padding"
+              onChange={(e) => setPassword(e.target.value)}
+              className={`textbox img-xxxl xxs-padding bottom-gutter ${
+                error ? `error` : ``
+              }`}
             />
           </div>
           <div className="card__actions xs-gutter">
@@ -59,11 +58,16 @@ const Login = () => {
               <a href="">Forgot you passowrd?</a>
             </div>
           </div>
+          {error && (
+            <div className="para-sm-xs red xs-gutter">
+              Invalid email or password, please check
+            </div>
+          )}
 
           <button
             href=""
             className="secondary-btn login-btn para-sm bold xs-gutter"
-            onClick={loginHandler}
+            onClick={() => loginHandler(email, password)}
           >
             Login
           </button>
