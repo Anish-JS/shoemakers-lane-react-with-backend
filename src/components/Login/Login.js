@@ -22,7 +22,7 @@ const Login = () => {
               Email address
             </label>
             <input
-              type="text"
+              type="email"
               onChange={(e) => setEmail(e.target.value)}
               placeholder="example@gmail.com"
               className={`textbox img-xxxl xxs-padding bottom-gutter ${

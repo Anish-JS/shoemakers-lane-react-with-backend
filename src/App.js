@@ -74,10 +74,6 @@ function App() {
           }
         ></Route>
       </Routes>
-      {/* <ProductListing products={productData.productList}></ProductListing> */}
-      {/* <Login></Login> */}
-      {/* <Card data={productData.productList[0]}></Card> */}
-      {/* <Cart></Cart> */}
     </div>
   );
 }

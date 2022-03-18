@@ -23,22 +23,21 @@ const AuthProvider = ({ children }) => {
     );
   };
   const loginHandler = async (email, password) => {
-    if (validateEmail(email)) {
-      try {
-        const response = await axios.post(
-          "api/auth/login",
-          JSON.stringify({
-            email: email,
-            password: password,
-          })
-        );
-        localStorage.setItem("token", "1");
-        setIsLoggedIn(true);
-        navigate("/");
-      } catch (error) {
-        console.log(error);
-      }
-    } else setError(true);
+    // if (validateEmail(email)) {
+    try {
+      console.log(email, password);
+      const response = await axios.post("/api/auth/login", {
+        email: email,
+        password: password,
+      });
+      // console.log(response);
+      localStorage.setItem("token", response.data.encodedToken);
+      setIsLoggedIn(true);
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
+    // } else setError(true);
   };
 
   const logoutHandler = () => {
@@ -55,19 +54,23 @@ const AuthProvider = ({ children }) => {
       details.password !== ""
     ) {
       try {
-        const response = await axios.post("api/auth/signup", {
-          firstName: details.firstName,
-          lastName: details.lastName,
-          email: details.email,
-          password: details.password,
-        });
+        const response = await axios.post(
+          "/api/auth/signup",
+          JSON.stringify({
+            firstName: details.firstName,
+            lastName: details.lastName,
+            email: details.email,
+            password: details.password,
+          }),
+          { headers: { "Content-Type": "application/json" } }
+        );
 
         localStorage.setItem("token", response.data.encodedToken);
         console.log(response);
         setIsLoggedIn(true);
         navigate("/");
       } catch (error) {
-        console.log(error);
+        console.log(error.response.data);
       }
     } else setError(true);
   };
