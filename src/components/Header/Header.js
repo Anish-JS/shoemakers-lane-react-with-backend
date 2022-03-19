@@ -51,9 +51,9 @@ const Header = (props) => {
           </div>
 
           <div className="left-nav-item xs-gutter xs-padding bold full-brr">
-            <a href="./pages/wishlist/wishlist.html">
+            <Link to="/wishlist">
               <FontAwesomeIcon icon={faHeart} className="para-sm" />
-            </a>
+            </Link>
           </div>
           <div className="left-nav-item xs-gutter xs-padding bold full-brr">
             <a href="./pages/cart page/Cart.html">

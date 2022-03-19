@@ -1,0 +1,12 @@
+.wishlist {
+  color: var(--primary-color);
+}
+
+.responsive-grid-items {
+  gap: 0;
+}
+
+.section-wishlist {
+  background-color: var(--bg-dull);
+  /* height: 100vh; */
+}

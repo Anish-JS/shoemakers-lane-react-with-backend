@@ -33,11 +33,17 @@
   position: absolute;
   top: 0;
   right: 0;
+  cursor: pointer;
   background-color: var(--txt-color);
   color: var(--danger-color);
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.2s;
+}
+.wish-icon:hover {
+  background-color: var(--danger-color);
+  color: var(--txt-color);
 }
 .card__author {
   display: flex;
@@ -47,4 +53,13 @@
 
 .rating {
   font-style: italic;
+}
+
+.wishlist-btns {
+  display: flex;
+  flex-direction: column;
+}
+.wishlist-btns > .secondary-btn,
+.wishlist-btns > .primary-btn {
+  width: 90%;
 }
