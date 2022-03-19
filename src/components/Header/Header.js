@@ -9,8 +9,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../store/auth-context";
+import { useWishList } from "../../store/wishlist-context";
 const Header = (props) => {
   const { isLoggedIn } = useAuth();
+  const { wishList } = useWishList();
   return (
     <>
       <div className="brand">
@@ -50,10 +52,13 @@ const Header = (props) => {
             </a>
           </div>
 
-          <div className="left-nav-item xs-gutter xs-padding bold full-brr">
+          <div className="left-nav-item xs-gutter xs-padding bold full-brr wishlist-heart">
             <Link to="/wishlist">
-              <FontAwesomeIcon icon={faHeart} className="para-sm" />
+              <FontAwesomeIcon icon={faHeart} className="para-sm " />
             </Link>
+            <div className="wishlist-count full-brr para-xs">
+              {wishList.length}
+            </div>
           </div>
           <div className="left-nav-item xs-gutter xs-padding bold full-brr">
             <a href="./pages/cart page/Cart.html">

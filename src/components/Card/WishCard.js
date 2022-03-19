@@ -1,7 +1,7 @@
 import React from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart, faHeartRate } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import rupeeIcon from "../../assets/rupee.svg";
 import "./Card.css";
 import { Link } from "react-router-dom";
@@ -14,13 +14,13 @@ const WishCard = (props) => {
 
   return (
     <>
-      <div className="card-container sm-gutter sm-brr" key={props.data["_id"]}>
+      <div className="card-container sm-gutter sm-brr">
         <div className="wish-list-position">
           <img className="img-full" src={props.data.image} alt="card-img" />
 
           <FontAwesomeIcon
-            onClick={() => addToWishListHandler(props.data)}
-            icon={faHeart}
+            onClick={() => removeFromWishList(props.data["_id"])}
+            icon={faTimesCircle}
             className="wish-icon xxs-padding xs-gutter full-brr"
           />
         </div>
@@ -35,7 +35,7 @@ const WishCard = (props) => {
             <img src={rupeeIcon} alt="rupee" className="img-xxxs" />
             <div className="xxs-padding">{props.data.price}</div>
           </div>
-          {/* <div className="card__info para-sm-xs">{props.data.productInfo}</div> */}
+
           <div className="card__info para-sm xs-gutter bold">
             {props.data.categoryName}
           </div>
@@ -44,7 +44,7 @@ const WishCard = (props) => {
           </div>
         </div>
         <div className="card__actions wishlist-btns">
-          <button className="primary-btn para-sm bold xs-gutter">
+          <button className="primary-btn add-to-cart para-sm bold xs-gutter">
             Add to Cart
           </button>
           <button

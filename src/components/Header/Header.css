@@ -1,1 +1,15 @@
 @import "../../shared.css";
+.wishlist-count {
+  background-color: var(--danger-color);
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 4px;
+  right: 0.2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wishlist-heart {
+  position: relative;
+}

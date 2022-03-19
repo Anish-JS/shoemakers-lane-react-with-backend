@@ -63,3 +63,8 @@
 .wishlist-btns > .primary-btn {
   width: 90%;
 }
+
+.add-to-cart:hover {
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}

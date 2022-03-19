@@ -20,8 +20,6 @@ const WishListProvider = ({ children }) => {
     }
   };
   const addToWishListHandler = async (product) => {
-    // console.log(wishList);
-
     try {
       const response = await axios.post(
         "/api/user/wishlist",
@@ -45,7 +43,6 @@ const WishListProvider = ({ children }) => {
           headers: { authorization: localStorage.getItem("token") },
         })
         .then((res) => setWishList(res.data.wishlist));
-      // console.log(response);
     } catch (error) {
       console.log(error);
     }
