@@ -18,6 +18,7 @@ import {
   Signup,
   Profile,
   Login,
+  WishList,
 } from "./components/index";
 
 function App() {
@@ -72,6 +73,7 @@ function App() {
             />
           }
         ></Route>
+        <Route path="/wishlist" element={<WishList />}></Route>
       </Routes>
     </div>
   );

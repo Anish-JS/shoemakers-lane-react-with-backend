@@ -1,24 +1,34 @@
 import React from "react";
 import CardImg from "../../assets/images.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faT, faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import rupeeIcon from "../../assets/rupee.svg";
+import { useWishList } from "../../store/wishlist-context";
 import "./Card.css";
-// import { useCart } from "../../store/cart-context";
+
 const Card = (props) => {
-  // const { dispatch } = useCart();
-  // console.log(props);
+  const { addToWishListHandler, wishList, removeFromWishList } = useWishList();
+  const index = wishList.findIndex((item) => item["_id"] === props.data["_id"]);
 
   return (
     <>
-      <div className="card-container sm-gutter sm-brr" key={props.data["_id"]}>
+      <div className="card-container sm-gutter sm-brr">
         <div className="wish-list-position">
           <img className="img-full" src={props.data.image} alt="card-img" />
 
-          <FontAwesomeIcon
-            icon={faHeart}
-            className="wish-icon xxs-padding xs-gutter full-brr"
-          />
+          {index === -1 ? (
+            <FontAwesomeIcon
+              onClick={() => addToWishListHandler(props.data)}
+              icon={faHeart}
+              className="wish-icon xxs-padding xs-gutter full-brr"
+            />
+          ) : (
+            <FontAwesomeIcon
+              icon={faTimesCircle}
+              onClick={() => removeFromWishList(props.data["_id"])}
+              className="wish-icon xxs-padding xs-gutter full-brr"
+            />
+          )}
         </div>
         <div className="card__content sm-gutter">
           <div className="card__heading para-md semibold-weight center">
@@ -28,7 +38,7 @@ const Card = (props) => {
             <img src={rupeeIcon} alt="rupee" className="img-xxxs" />
             <div className="xxs-padding">{props.data.price}</div>
           </div>
-          {/* <div className="card__info para-sm-xs">{props.data.productInfo}</div> */}
+
           <div className="card__info para-sm xs-gutter bold">
             {props.data.categoryName}
           </div>
