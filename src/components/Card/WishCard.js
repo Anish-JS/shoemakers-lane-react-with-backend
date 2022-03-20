@@ -5,12 +5,18 @@ import { faHeart, faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import rupeeIcon from "../../assets/rupee.svg";
 import "./Card.css";
 import { Link } from "react-router-dom";
+import { addToCart, removeFromCart } from "../../utils/cartServices/index";
 
 import { useWishList } from "../../store/wishlist-context";
 import { useState } from "react";
-// import { useCart } from "../../store/cart-context";
+import { useCart } from "../../store/cart-context";
 const WishCard = (props) => {
+  const { cartState, dispatchCartState } = useCart();
+  const { cartItems } = cartState;
   const { addToWishListHandler, removeFromWishList } = useWishList();
+  const indexOfAddedCartItem = cartItems.findIndex(
+    (item) => item["_id"] === props.data["_id"]
+  );
 
   return (
     <>
@@ -44,9 +50,23 @@ const WishCard = (props) => {
           </div>
         </div>
         <div className="card__actions wishlist-btns">
-          <button className="primary-btn add-to-cart para-sm bold xs-gutter">
-            Add to Cart
-          </button>
+          {indexOfAddedCartItem === -1 ? (
+            <button
+              className="secondary-btn para-sm bold xs-gutter"
+              onClick={() => addToCart(props.data, dispatchCartState)}
+            >
+              Add to Cart
+            </button>
+          ) : (
+            <button
+              className="secondary-btn para-sm bold xs-gutter"
+              onClick={() =>
+                removeFromCart(props.data["_id"], dispatchCartState)
+              }
+            >
+              Remove from Cart
+            </button>
+          )}
           <button
             className="secondary-btn para-sm bold xs-gutter"
             onClick={() => removeFromWishList(props.data["_id"])}

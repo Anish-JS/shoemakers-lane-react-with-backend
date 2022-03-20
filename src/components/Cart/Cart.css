@@ -1,0 +1,21 @@
+.section-cart {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  align-items: flex-start;
+  color: var(--primary-color);
+}
+.right-section-cart {
+  background-color: var(--txt-color);
+}
+
+.cartItem-section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  align-items: flex-end;
+}
