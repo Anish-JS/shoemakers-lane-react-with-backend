@@ -1,21 +1,24 @@
 const cartDetails = (cartItems) => {
-  const totalPrice = cartItems.reduce(
-    (acc, curr) => (acc += parseInt(curr.price) * parseInt(curr.qty)),
-    0
+  const cartDetailsObj = cartItems.reduce(
+    (acc, curr) => {
+      acc.totalPrice += parseInt(curr.price) * parseInt(curr.qty);
+      acc.discount +=
+        parseFloat(curr.discount) * parseInt(curr.price) * parseInt(curr.qty);
+      acc.deliveryCharges += parseInt(curr.deliveryCharges);
+      return { ...acc };
+    },
+    {
+      totalPrice: 0,
+      discount: 0,
+      deliveryCharges: 0,
+    }
   );
-  const discount = cartItems.reduce(
-    (acc, curr) =>
-      (acc +=
-        parseFloat(curr.discount) * parseInt(curr.price) * parseInt(curr.qty)),
-    0
-  );
-  const deliveryCharges = cartItems.reduce(
-    (acc, curr) => (acc += parseInt(curr.deliveryCharges)),
-    0
-  );
-  const totalAmount = totalPrice - discount + deliveryCharges;
+  const totalAmount =
+    cartDetailsObj.totalPrice -
+    cartDetailsObj.discount +
+    cartDetailsObj.deliveryCharges;
 
-  return { totalPrice, discount, deliveryCharges, totalAmount };
+  return { cartDetailsObj, totalAmount };
 };
 
 export { cartDetails };

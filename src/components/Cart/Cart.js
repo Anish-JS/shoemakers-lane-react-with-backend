@@ -10,7 +10,6 @@ const Cart = () => {
   const { cartState } = useCart();
 
   const { cartItems } = cartState;
-  console.log(cartItems);
 
   const cartItemList = cartItems.map((item) => (
     <CartCard data={item} key={item["_id"]} />
@@ -22,16 +21,16 @@ const Cart = () => {
         <h3 className="center sm-gutter">Please Login</h3>
       ) : cartItems.length === 0 ? (
         <>
-          <h2 class="center xs-gutter">My Cart({cartItems.length})</h2>
+          <h2 className="center xs-gutter">My Cart({cartItems.length})</h2>
           <h3 className="center xs-gutter">There no items here</h3>
         </>
       ) : (
         <>
-          <h2 class="center xs-gutter">My Cart({cartItems.length})</h2>
-          <div class="section-cart sm-gutter">
+          <h2 className="center xs-gutter">My Cart({cartItems.length})</h2>
+          <div className="section-cart sm-gutter">
             <div className="cartItem-section">{cartItemList}</div>
             {
-              <div class="right-section-cart xs-padding">
+              <div className="right-section-cart xs-padding">
                 <CartSummary details={cartItems}></CartSummary>
               </div>
             }

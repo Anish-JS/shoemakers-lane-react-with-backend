@@ -12,7 +12,6 @@ const cartReducer = (state, action) => {
       return { ...state, cartItems: action.payload.cart };
 
     case "ADD":
-      console.log(action.payload.updatedCart);
       return { ...state, cartItems: action.payload.updatedCart };
 
     case "REMOVE":

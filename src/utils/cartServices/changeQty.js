@@ -2,7 +2,6 @@ import axios from "axios";
 
 const changeQty = async (id, dispatchCartState, changeType) => {
   if (localStorage.getItem("token")) {
-    console.log(changeType);
     try {
       const {
         data: { cart },

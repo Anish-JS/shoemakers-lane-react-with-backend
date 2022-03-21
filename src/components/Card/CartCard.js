@@ -12,7 +12,7 @@ const CartCard = (props) => {
     const existingCartItem = cartState.cartItems.filter(
       (item) => item["_id"] === props.data["_id"]
     );
-    console.log(existingCartItem[0].qty);
+
     if (parseInt(existingCartItem[0].qty) > parseInt(e.target.value)) {
       changeType = "decrement";
     } else {
@@ -23,48 +23,48 @@ const CartCard = (props) => {
 
   return (
     <>
-      <div class="left-section-cart xs-padding xs-gutter sm-brr">
+      <div className="left-section-cart xs-padding xs-gutter sm-brr">
         <img
           src={props.data.image}
-          class="img-height-cart xs-padding"
+          className="img-height-cart xs-padding"
           alt="shoe-img"
         />
 
-        <div class="product-details sm-gutter">
-          <div class="title para-md xs-gutter bold">{props.data.name}</div>
-          <div class="xs-gutter price-card">
+        <div className="product-details sm-gutter">
+          <div className="title para-md xs-gutter bold">{props.data.name}</div>
+          <div className="xs-gutter price-card">
             <img src={rupeeIcon} alt="rupee" className="rupee-icon img-xxxs" />
             <span className="para-md xs-gutter">{props.data.price}</span>
           </div>
-          <div class="discount xs-gutter">
+          <div className="discount xs-gutter">
             {parseFloat(props.data.discount) * 100 + "% discount"}
           </div>
-          <div class="quant xs-gutter">
+          <div className="quant xs-gutter">
             Quantity
             <input
               type="number"
               value={props.data.qty}
-              class="xs-brr xs-gutter xs-padding quantity-input center"
+              className="xs-brr xs-gutter xs-padding quantity-input center"
               onChange={(e) => changeQtyHandler(e)}
               min="1"
               max="5"
             />
           </div>
           <button
-            class="secondary-btn para-sm bold xs-gutter center"
+            className="secondary-btn para-sm bold xs-gutter center"
             onClick={() => removeFromCart(props.data["_id"], dispatchCartState)}
           >
             Remove from cart
           </button>
           {index === -1 ? (
             <button
-              class="primary-btn btn-style para-sm bold xs-gutter center"
+              className="primary-btn btn-style para-sm bold xs-gutter center"
               onClick={() => addToWishListHandler(props.data)}
             >
               Add to wishlist
             </button>
           ) : (
-            <button class="primary-btn btn-style para-sm bold xs-gutter center">
+            <button className="primary-btn btn-style para-sm bold xs-gutter center">
               Product In WishList
             </button>
           )}

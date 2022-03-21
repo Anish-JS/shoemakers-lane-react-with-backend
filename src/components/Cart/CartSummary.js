@@ -3,14 +3,13 @@ import "./Cart.css";
 import { cartDetails } from "../../utils/cartServices/cartDetails";
 import rupeeIcon from "../../assets/rupee.svg";
 const CartSummary = (props) => {
-  const { totalAmount, totalPrice, discount, deliveryCharges } = cartDetails(
-    props.details
-  );
+  const { cartDetailsObj, totalAmount } = cartDetails(props.details);
+  const { totalPrice, discount, deliveryCharges } = cartDetailsObj;
   return (
     <>
-      <div class="product-details sm-gutter">
-        <div class="title para-sm xs-gutter bold">Price Details</div>
-        <div class="price xs-gutter">
+      <div className="product-details sm-gutter">
+        <div className="title para-sm xs-gutter bold">Price Details</div>
+        <div className="price xs-gutter">
           <div>Price ({props.details.length})</div>
           <div>
             <img
@@ -21,7 +20,7 @@ const CartSummary = (props) => {
             {totalPrice}
           </div>
         </div>
-        <div class="price xs-gutter">
+        <div className="price xs-gutter">
           <div>Discount</div>
           <div>
             <img
@@ -32,7 +31,7 @@ const CartSummary = (props) => {
             {discount}
           </div>
         </div>
-        <div class="price xs-gutter">
+        <div className="price xs-gutter">
           <div>Delivery Charges</div>
           <div>
             <img
@@ -43,9 +42,9 @@ const CartSummary = (props) => {
             {deliveryCharges}
           </div>
         </div>
-        <div class="price xs-gutter top-padding">
-          <div class="bold">Total Amount</div>
-          <div class="bold">
+        <div className="price xs-gutter top-padding">
+          <div className="bold">Total Amount</div>
+          <div className="bold">
             <img
               src={rupeeIcon}
               alt="rupee"
@@ -54,7 +53,7 @@ const CartSummary = (props) => {
             {totalAmount}
           </div>
         </div>
-        <div class="xs-gutter">
+        <div className="xs-gutter">
           You will save
           <img
             src={rupeeIcon}
@@ -64,9 +63,9 @@ const CartSummary = (props) => {
           {discount} on this order
         </div>
 
-        <a href="" class="secondary-btn para-sm bold xs-gutter center">
+        <button className="secondary-btn para-sm bold xs-gutter center">
           Place Order
-        </a>
+        </button>
       </div>
     </>
   );
