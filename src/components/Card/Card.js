@@ -5,10 +5,17 @@ import { faHeart, faT, faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import rupeeIcon from "../../assets/rupee.svg";
 import { useWishList } from "../../store/wishlist-context";
 import "./Card.css";
+import { useCart } from "../../store/cart-context";
+import { addToCart, removeFromCart } from "../../utils/cartServices/index";
 
 const Card = (props) => {
+  const { cartState, dispatchCartState } = useCart();
+  const { cartItems } = cartState;
   const { addToWishListHandler, wishList, removeFromWishList } = useWishList();
   const index = wishList.findIndex((item) => item["_id"] === props.data["_id"]);
+  const indexOfAddedCartItem = cartItems.findIndex(
+    (item) => item["_id"] === props.data["_id"]
+  );
 
   return (
     <>
@@ -47,9 +54,23 @@ const Card = (props) => {
           </div>
         </div>
         <div className="card__actions">
-          <button className="secondary-btn para-sm bold xs-gutter">
-            Add to Cart
-          </button>
+          {indexOfAddedCartItem === -1 ? (
+            <button
+              className="secondary-btn para-sm bold xs-gutter"
+              onClick={() => addToCart(props.data, dispatchCartState)}
+            >
+              Add to Cart
+            </button>
+          ) : (
+            <button
+              className="secondary-btn para-sm bold xs-gutter"
+              onClick={() =>
+                removeFromCart(props.data["_id"], dispatchCartState)
+              }
+            >
+              Remove from Cart
+            </button>
+          )}
         </div>
       </div>
     </>

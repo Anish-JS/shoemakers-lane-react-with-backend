@@ -10,6 +10,7 @@ import { ratingFilter } from "./utils/productFilters/rating";
 import { priceRangeFilter } from "./utils/productFilters/priceRangeFilter";
 import { fastDeliveryFilter } from "./utils/productFilters/fastDeliveryFilter";
 import { outOfStockFilter } from "./utils/productFilters/outOfStockFilter";
+import Cart from "./components/Cart/Cart";
 import Mockman from "mockman-js";
 import {
   ProductListing,
@@ -74,6 +75,7 @@ function App() {
           }
         ></Route>
         <Route path="/wishlist" element={<WishList />}></Route>
+        <Route path="/cart" element={<Cart />}></Route>
       </Routes>
     </div>
   );

@@ -1,0 +1,55 @@
+@import "../../shared.css";
+
+/* Sections */
+
+.left-section-cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  background-color: var(--txt-color);
+}
+
+/* Image dimension */
+.img-height-cart {
+  height: 350px;
+}
+
+/* Product details */
+.product-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.quantity-input {
+  outline: none;
+  border: none;
+}
+.btn-style {
+  color: var(--txt-color);
+}
+.btn-style:hover {
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.price-card {
+  display: flex;
+  align-items: center;
+}
+
+.rupee-icon {
+  width: 10px;
+  margin-left: 5px;
+  margin-right: 1px;
+}

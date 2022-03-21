@@ -10,9 +10,12 @@ import {
 import { Link } from "react-router-dom";
 import { useAuth } from "../../store/auth-context";
 import { useWishList } from "../../store/wishlist-context";
+import { useCart } from "../../store/cart-context";
 const Header = (props) => {
   const { isLoggedIn } = useAuth();
   const { wishList } = useWishList();
+  const { cartState } = useCart();
+  const { cartItems } = cartState;
   return (
     <>
       <div className="brand">
@@ -60,10 +63,13 @@ const Header = (props) => {
               {wishList.length}
             </div>
           </div>
-          <div className="left-nav-item xs-gutter xs-padding bold full-brr">
-            <a href="./pages/cart page/Cart.html">
+          <div className="left-nav-item xs-gutter xs-padding bold full-brr wishlist-heart">
+            <Link to="/cart">
               <FontAwesomeIcon icon={faCartShopping} className="para-sm" />
-            </a>
+            </Link>
+            <div className="wishlist-count full-brr para-xs">
+              {cartItems.length}
+            </div>
           </div>
           <div className="left-nav-item xs-gutter full-brr">
             {!isLoggedIn && (
