@@ -2,15 +2,17 @@ import { useEffect } from "react";
 import { useState } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import { sortProducts } from "./utils/productFilters/sortProducts";
-import { typeOfProductFilter } from "./utils/productFilters/typeOfProduct";
 import { useFilters } from "./store/filter-context";
-import { productCategory } from "./utils/productFilters/productCategory";
-import { ratingFilter } from "./utils/productFilters/rating";
-import { priceRangeFilter } from "./utils/productFilters/priceRangeFilter";
-import { fastDeliveryFilter } from "./utils/productFilters/fastDeliveryFilter";
-import { outOfStockFilter } from "./utils/productFilters/outOfStockFilter";
-import { searchFilter } from "./utils/productFilters/searchFilter";
+import {
+  sortProducts,
+  typeOfProductFilter,
+  productCategory,
+  ratingFilter,
+  priceRangeFilter,
+  fastDeliveryFilter,
+  outOfStockFilter,
+  searchFilter,
+} from "./utils/productFilters/index";
 import Cart from "./components/Cart/Cart";
 import Mockman from "mockman-js";
 import {

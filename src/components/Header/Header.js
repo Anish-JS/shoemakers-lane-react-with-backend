@@ -10,21 +10,24 @@ import {
 import { Link } from "react-router-dom";
 import { useAuth } from "../../store/auth-context";
 import { useWishList } from "../../store/wishlist-context";
-import { useState } from "react";
+
 import { Search } from "../index";
+import { useSearch } from "../../store/search-context";
 import { useCart } from "../../store/cart-context";
+import { useEffect } from "react";
 const Header = (props) => {
   const { isLoggedIn } = useAuth();
   const { wishList } = useWishList();
-  const [search, setSearch] = useState(false);
+  const { search, setSearch } = useSearch();
   const { cartState } = useCart();
   const { cartItems } = cartState;
+
   return (
     <>
       <div className="brand">
         <div className="brand-items">
           <div className="navbar_header xs-gutter xs-padding">
-            <Link to="/">
+            <Link to="/" onClick={() => setSearch(false)}>
               <FontAwesomeIcon icon={faBars} className="para-md dull-color" />
             </Link>
           </div>
