@@ -10,10 +10,13 @@ import {
 import { Link } from "react-router-dom";
 import { useAuth } from "../../store/auth-context";
 import { useWishList } from "../../store/wishlist-context";
+import { useState } from "react";
+import { Search } from "../index";
 import { useCart } from "../../store/cart-context";
 const Header = (props) => {
   const { isLoggedIn } = useAuth();
   const { wishList } = useWishList();
+  const [search, setSearch] = useState(false);
   const { cartState } = useCart();
   const { cartItems } = cartState;
   return (
@@ -30,29 +33,41 @@ const Header = (props) => {
           </div>
         </div>
         <div className="brand-nav">
-          <div className="left-nav-item xs-gutter full-brr">
-            <Link to="/" className="primary-btn sm-brr para-sm">
-              Home
-            </Link>
-          </div>
-          <div className="left-nav-item xs-gutter full-brr">
-            <Link to="/product-listing" className="primary-btn sm-brr para-sm">
-              Catalogue
-            </Link>
-          </div>
-          <div className="left-nav-item xs-gutter full-brr">
-            <Link to="/new-arrival" className="primary-btn sm-brr para-sm">
-              New Arrivals
-            </Link>
-          </div>
+          {!search ? (
+            <>
+              <div className="left-nav-item xs-gutter full-brr">
+                <Link to="/" className="primary-btn sm-brr para-sm">
+                  Home
+                </Link>
+              </div>
+              <div className="left-nav-item xs-gutter full-brr">
+                <Link
+                  to="/product-listing"
+                  className="primary-btn sm-brr para-sm"
+                >
+                  Catalogue
+                </Link>
+              </div>
+              <div className="left-nav-item xs-gutter full-brr">
+                <Link to="/new-arrival" className="primary-btn sm-brr para-sm">
+                  New Arrivals
+                </Link>
+              </div>
+            </>
+          ) : (
+            <Search />
+          )}
         </div>
 
         <div className="brand-actions">
           <div className="left-nav-item xs-gutter xs-padding bold full-brr">
-            <a href="" className="x">
-              {" "}
-              <FontAwesomeIcon icon={faMagnifyingGlass} className="para-sm" />
-            </a>
+            <Link to="/product-listing">
+              <FontAwesomeIcon
+                icon={faMagnifyingGlass}
+                className="para-sm search"
+                onClick={() => setSearch((search) => !search)}
+              />
+            </Link>
           </div>
 
           <div className="left-nav-item xs-gutter xs-padding bold full-brr wishlist-heart">

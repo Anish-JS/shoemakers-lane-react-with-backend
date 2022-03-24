@@ -13,3 +13,9 @@
 .wishlist-heart {
   position: relative;
 }
+.search {
+  cursor: pointer;
+}
+.searchbar {
+  width: 30rem;
+}

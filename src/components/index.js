@@ -6,5 +6,16 @@ import Login from "./Login/Login";
 import Signup from "./Login/Signup";
 import Profile from "./Profile/Profile";
 import WishList from "./WishList/WishList";
+import Search from "./Header/Search";
 
-export { Card, ProductListing, Header, Home, Login, Signup, Profile, WishList };
+export {
+  Card,
+  ProductListing,
+  Header,
+  Home,
+  Login,
+  Signup,
+  Profile,
+  WishList,
+  Search,
+};
