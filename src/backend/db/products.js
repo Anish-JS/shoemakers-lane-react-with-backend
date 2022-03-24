@@ -56,7 +56,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    name: "Niky Grid Training",
+    name: "Grid Training",
     price: "5000",
     discount: "0.2",
     deliveryCharges: "50",
@@ -88,7 +88,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    name: "Niky Neon Trainers",
+    name: "Neon Trainers",
     price: "1500",
     discount: "0.2",
     deliveryCharges: "50",
@@ -104,7 +104,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    name: "Niky Orange Highlight",
+    name: " Orange Highlight",
     price: "1700",
     discount: "0.2",
     deliveryCharges: "50",

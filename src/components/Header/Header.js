@@ -61,11 +61,13 @@ const Header = (props) => {
 
         <div className="brand-actions">
           <div className="left-nav-item xs-gutter xs-padding bold full-brr">
-            <FontAwesomeIcon
-              icon={faMagnifyingGlass}
-              className="para-sm search"
-              onClick={() => setSearch((search) => !search)}
-            />
+            <Link to="/product-listing">
+              <FontAwesomeIcon
+                icon={faMagnifyingGlass}
+                className="para-sm search"
+                onClick={() => setSearch((search) => !search)}
+              />
+            </Link>
           </div>
 
           <div className="left-nav-item xs-gutter xs-padding bold full-brr wishlist-heart">
