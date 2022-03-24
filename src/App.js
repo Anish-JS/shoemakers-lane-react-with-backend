@@ -10,6 +10,7 @@ import { ratingFilter } from "./utils/productFilters/rating";
 import { priceRangeFilter } from "./utils/productFilters/priceRangeFilter";
 import { fastDeliveryFilter } from "./utils/productFilters/fastDeliveryFilter";
 import { outOfStockFilter } from "./utils/productFilters/outOfStockFilter";
+import { searchFilter } from "./utils/productFilters/searchFilter";
 import Cart from "./components/Cart/Cart";
 import Mockman from "mockman-js";
 import {
@@ -39,9 +40,11 @@ function App() {
     priceRange,
     fastDelivery,
     inStock,
+    search,
   } = filterState;
 
-  const sortedData = sortProducts(initialData, sort);
+  const searchData = searchFilter(initialData, search);
+  const sortedData = sortProducts(searchData, sort);
   const typeOfProductData = typeOfProductFilter(sortedData, typeOfProduct);
   const categoryData = productCategory(typeOfProductData, category);
   const ratingData = ratingFilter(categoryData, rating);

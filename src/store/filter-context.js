@@ -13,6 +13,7 @@ const initialState = {
   category: { running: false, sneakers: false, training: false },
   rating: "",
   priceRange: "5000",
+  search: "",
 };
 
 const FilterProvider = ({ children }) => {
