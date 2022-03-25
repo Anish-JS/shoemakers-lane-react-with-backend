@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
 import { categoryData } from "../../../utils/categoryData";
 import CategoryCard from "../../Card/CategoryCard";
 import { Link } from "react-router-dom";
