@@ -51,11 +51,6 @@ const Header = (props) => {
                   Catalogue
                 </Link>
               </div>
-              <div className="left-nav-item xs-gutter full-brr">
-                <Link to="/new-arrival" className="primary-btn sm-brr para-sm">
-                  New Arrivals
-                </Link>
-              </div>
             </>
           ) : (
             <Search />
