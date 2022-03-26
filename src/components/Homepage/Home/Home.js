@@ -2,6 +2,7 @@ import HomeSummary from "../HomeSummary/HomeSummary";
 import "./Home.css";
 import Deals from "../Deals/Deals";
 import NewArrivalComponent from "../NewArrivals/NewArrivalComponent";
+import Categories from "../Categories/Categories";
 const Home = (props) => {
   // console.log(props.products);
   return (
@@ -13,7 +14,8 @@ const Home = (props) => {
       <div className="deals">
         <Deals productData={props.products}></Deals>
       </div>
-      <NewArrivalComponent></NewArrivalComponent>
+      {/* <NewArrivalComponent></NewArrivalComponent> */}
+      <Categories />
     </>
   );
 };
