@@ -7,6 +7,8 @@ import Signup from "./Login/Signup";
 import Profile from "./Profile/Profile";
 import WishList from "./WishList/WishList";
 import Search from "./Header/Search";
+import SingleProduct from "./SingleProduct/SingleProduct";
+import About from "./About/About";
 
 export {
   Card,
@@ -18,4 +20,6 @@ export {
   Profile,
   WishList,
   Search,
+  SingleProduct,
+  About,
 };

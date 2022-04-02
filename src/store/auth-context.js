@@ -31,6 +31,7 @@ const AuthProvider = ({ children }) => {
       });
       // console.log(response);
       localStorage.setItem("token", response.data.encodedToken);
+      localStorage.setItem("user", JSON.stringify(response.data.foundUser));
       setIsLoggedIn(true);
       navigate("/");
     } catch (error) {
@@ -42,6 +43,7 @@ const AuthProvider = ({ children }) => {
   const logoutHandler = () => {
     setIsLoggedIn(false);
     localStorage.removeItem("token");
+    localStorage.removeItem("user");
     navigate("/");
   };
 
@@ -65,6 +67,7 @@ const AuthProvider = ({ children }) => {
         );
 
         localStorage.setItem("token", response.data.encodedToken);
+        localStorage.setItem("user", JSON.stringify(response.data.createdUser));
         console.log(response);
         setIsLoggedIn(true);
         navigate("/");
