@@ -6,6 +6,7 @@ import rupeeIcon from "../../assets/rupee.svg";
 import { useWishList } from "../../store/wishlist-context";
 import "./Card.css";
 import { useCart } from "../../store/cart-context";
+import { Link } from "react-router-dom";
 import { addToCart, removeFromCart } from "../../utils/cartServices/index";
 
 const Card = (props) => {
@@ -38,9 +39,12 @@ const Card = (props) => {
           )}
         </div>
         <div className="card__content sm-gutter">
-          <div className="card__heading para-md semibold-weight center">
+          <Link
+            className="card__heading para-md semibold-weight center"
+            to={`/product/${props.data["_id"]}`}
+          >
             {props.data.name}
-          </div>
+          </Link>
           <div className="card__author para-sm bold">
             <img src={rupeeIcon} alt="rupee" className="img-xxxs" />
             <div className="xxs-padding">{props.data.price}</div>

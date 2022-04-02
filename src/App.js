@@ -23,6 +23,8 @@ import {
   Profile,
   Login,
   WishList,
+  SingleProduct,
+  About,
 } from "./components/index";
 
 function App() {
@@ -66,6 +68,7 @@ function App() {
           path="/product-listing"
           element={<ProductListing products={filteredInitialData} />}
         />
+        <Route path="/product/:productId" element={<SingleProduct />}></Route>
         <Route path="/profile" element={<Profile />}></Route>
         <Route
           path="/mock"
@@ -80,6 +83,7 @@ function App() {
           }
         ></Route>
         <Route path="/wishlist" element={<WishList />}></Route>
+        <Route path="/about" element={<About />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
       </Routes>
     </div>
