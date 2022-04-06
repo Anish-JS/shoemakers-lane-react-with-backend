@@ -71,7 +71,7 @@ const SingleProductCard = (props) => {
           )}
           <button
             className="secondary-btn  para-sm bold xs-gutter center"
-            onClick={() => goToProductPage()}
+            onClick={goToProductPage}
           >
             Go Back
           </button>

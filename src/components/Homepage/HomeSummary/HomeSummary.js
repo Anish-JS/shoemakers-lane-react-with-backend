@@ -6,12 +6,11 @@ const HomeSummary = () => {
         <section className="xl-gutter img-xl sm-padding sm-brr">
           <h3 className="para-lg xs-gutter">Welcome To Shoemakers' Lane</h3>
           <p className="para-sm-xs xs-gutter">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
+            The Shoemaker’s Lane is your one-stop shop for all your footwear
+            needs. We give you the best of the best choices one can want. Grab
+            our shoes for an economical and satisfying experience. We are a
+            sustainable, eco-friendly brand. Toss on a pair of our shoes and
+            show your support for a greener planet!
           </p>
         </section>
       </div>
