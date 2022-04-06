@@ -31,8 +31,6 @@ const SingleProduct = (props) => {
     })();
   }, [localStorage.getItem(`single_product/${productId}`)]);
 
-  // console.log(productData);
-
   return (
     <>
       <div class="section-cart single-product sm-gutter">

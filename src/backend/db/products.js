@@ -19,7 +19,7 @@ export const products = [
     type: "women",
     image:
       "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    productInfo: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    productInfo: `New, Breathable knitted upper which is easily washable, perfect for all seasons - winter, summer and rainy, designed to give you the most comfortable fitting.Best running shoes for mens can be used in gym workout, outdoor running, morning walking, basketball, badminton, trekking, hip hop dance, party wear, dancing, volleyball, hiking, athletic sports.`,
   },
   {
     _id: uuid(),
@@ -34,7 +34,7 @@ export const products = [
       "https://images.unsplash.com/photo-1597045566677-8cf032ed6634?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c25lYWtlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
     type: "men",
     rating: "4/5",
-    productInfo: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    productInfo: `An overlay wrapping around the forefoot area, eye-catching branding and a bold modular heel clip all sprinkle their ultramodern magic onto this shoe. And with a lightweight midsole and cushiony SoftFoam+ sockliner, you will have a spring in your step however far you travel. comfort sockliner for instant step-in and long-lasting comfort that provides soft cushioning every step of your dayDETAILS Low boot silhouette Mixed material upper with overlay wrapping around the forefoot area SoftFoam+ sockliner EVA TPU midsole Rubber outsole Lace closure for snug fit Heel clip inspired by modular style`,
   },
   {
     _id: uuid(),
@@ -49,7 +49,7 @@ export const products = [
       "https://images.unsplash.com/photo-1585944672394-4c58a015c1fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
     type: "kids",
     rating: "2/5",
-    productInfo: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    productInfo: `These trainers help you transition from heavy lifting in the weight room to agility drills on the turf without skipping a beat. It packs stability, durability and flexibility into a versatile design that supports all the ways you move while you train for your sport.Full-length rubber tread gives you grip on a range of surfaces, while foam cushioning keeps your foot comfortablefrom outdoor workouts into the rest of your day.`,
   },
   {
     _id: uuid(),
@@ -64,7 +64,7 @@ export const products = [
       "https://images.unsplash.com/photo-1605348532760-6753d2c43329?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
     rating: "3/5",
     type: "women",
-    productInfo: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    productInfo: `These trainers help you transition from heavy lifting in the weight room to agility drills on the turf without skipping a beat. It packs stability, durability and flexibility into a versatile design that supports all the ways you move while you train for your sport.Full-length rubber tread gives you grip on a range of surfaces, while foam cushioning keeps your foot comfortablefrom outdoor workouts into the rest of your day.`,
   },
   {
     _id: uuid(),
@@ -79,7 +79,7 @@ export const products = [
       "https://images.unsplash.com/photo-1582588678413-dbf45f4823e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80",
     rating: "3/5",
     type: "women",
-    productInfo: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    productInfo: `These trainers help you transition from heavy lifting in the weight room to agility drills on the turf without skipping a beat. It packs stability, durability and flexibility into a versatile design that supports all the ways you move while you train for your sport. Full-length rubber tread gives you grip on a range of surfaces, while foam cushioning keeps your foot comfortablefrom outdoor workouts into the rest of your day.`,
   },
   {
     _id: uuid(),
@@ -94,7 +94,7 @@ export const products = [
       "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
     rating: "2/5",
     type: "women",
-    productInfo: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    productInfo: `New, Breathable knitted upper which is easily washable, perfect for all seasons - winter, summer and rainy, designed to give you the most comfortable fitting.Best running shoes for mens can be used in gym workout, outdoor running, morning walking, basketball, badminton, trekking, hip hop dance, party wear, dancing, volleyball, hiking, athletic sports.`,
   },
   {
     _id: uuid(),
@@ -109,7 +109,7 @@ export const products = [
       "https://images.unsplash.com/photo-1611080027147-a1a0b6e05168?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80",
     rating: "4/5",
     type: "women",
-    productInfo: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    productInfo: `These trainers help you transition from heavy lifting in the weight room to agility drills on the turf without skipping a beat. It packs stability, durability and flexibility into a versatile design that supports all the ways you move while you train for your sport. Full-length rubber tread gives you grip on a range of surfaces, while foam cushioning keeps your foot comfortablefrom outdoor workouts into the rest of your day.`,
   },
   {
     _id: uuid(),
@@ -124,7 +124,7 @@ export const products = [
       "https://images.unsplash.com/photo-1607522370275-f14206abe5d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=821&q=80",
     rating: "1/5",
     type: "men",
-    productInfo: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    productInfo: `An overlay wrapping around the forefoot area, eye-catching branding and a bold modular heel clip all sprinkle their ultramodern magic onto this shoe. And with a lightweight midsole and cushiony SoftFoam+ sockliner, you will have a spring in your step however far you travel. comfort sockliner for instant step-in and long-lasting comfort that provides soft cushioning every step of your dayDETAILS Low boot silhouette Mixed material upper with overlay wrapping around the forefoot area SoftFoam+ sockliner EVA TPU midsole Rubber outsole Lace closure for snug fit Heel clip inspired by modular style`,
   },
   ,
   {
@@ -140,6 +140,6 @@ export const products = [
       "https://images.unsplash.com/photo-1586525198428-225f6f12cff5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
     rating: "2/5",
     type: "men",
-    productInfo: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    productInfo: `An overlay wrapping around the forefoot area, eye-catching branding and a bold modular heel clip all sprinkle their ultramodern magic onto this shoe. And with a lightweight midsole and cushiony SoftFoam+ sockliner, you will have a spring in your step however far you travel. comfort sockliner for instant step-in and long-lasting comfort that provides soft cushioning every step of your dayDETAILS Low boot silhouette Mixed material upper with overlay wrapping around the forefoot area SoftFoam+ sockliner EVA TPU midsole Rubber outsole Lace closure for snug fit Heel clip inspired by modular style`,
   },
 ];
